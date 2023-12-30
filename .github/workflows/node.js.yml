@@ -11,21 +11,51 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
+        node-version: [20.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
     - run: npm run build --if-present
-    - run: npm test
+    - run: npm run test --if-present
+    - run: mkdir build
+    - run: mv out/** build 
+    - uses: actions/upload-artifact@v4
+      with:
+       name: build
+       path: |
+        build
+
+  deploy:
+    runs-on: ubuntu-latest
+    if: success()
+    needs: build
+    environment: kg59.github.io        
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        repository: kg59/kg59.github.io
+        ref: 'main'
+        token:  ${{secrets.KG59}}
+    - name: setup git config
+      run: |
+        git config user.name "GitHub Actions Bot"
+        git config user.email "<>"
+    - uses: actions/download-artifact@v4
+    - run: |
+       rm -rf ./_next
+       mv -f build/** .
+       touch .nojekyll
+    - run: |
+       git add .
+       git commit -m "Deployed by ${{ github.actor }} request ${{ github.ref_name }}"
+    - run: git push origin main
