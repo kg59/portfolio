@@ -1,13 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*Default Styles*/
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    @apply bg-gray-200 text-gray-800 font-sans; 
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+header {
+    @apply pt-5 px-0;
+}
+
+
+@layer components {
+    /*Nav Styles*/
+    .nav-box {
+        @apply w-full flex mx-auto fixed z-40
+    }
+
+    .nav-list {
+        @apply flex justify-between mx-auto gap-2 sm:gap-3 md:gap-4 text-sm lg:text-lg md:text-base p-4 border rounded-full bg-gray-300/[0.9]
+    }
+
+    .nav-item {
+        @apply p-2 md:px-6 rounded-full;
+    }
+
+    .nav-icon {
+        @apply hidden md:table-cell rounded-md border text-xs py-1 px-2 border-gray-400 align-text-top;
+    }
+
+    .nav-item-selected { 
+        @apply p-2 md:px-6 rounded-full bg-slate-50;
+        animation: nav-select 0.6s
+    }
+
+    @keyframes nav-select {
+        0% {background-color: rgb(209 213 219 / 0.9)} 
+        100% {background-color:rgb(248 250 252)} 
+    }
+
+     /*Hero Styles*/
+    .content {
+        @apply pt-24 md:pt-40 lg:pt-48;
+    }
+
+    .hero-box {
+        @apply font-extrabold justify-evenly w-full flex;
+    }
+
+    .hero-star {
+        @apply hidden md:table-cell;
+    }
+
+    .hero-star > span {
+        @apply text-6xl;
+    }
+
+    .hero-name {
+        @apply text-4xl md:text-7xl lg:text-9xl text-center;
+    }
+
+    .hero-sub {
+        @apply text-base md:text-2xl font-normal p-4 mt-3;
+    }
+
+    /* Work Styles*/
+    .work-box {
+        @apply flex px-8 lg:py-10 lg:px-2 justify-evenly mt-1 md:mt-5 xl:mt-20;
+    }
+
+    .work-box-mobile {
+        @apply flex-row
+    }
+
+    .work-card-small {
+        @apply xl:mx-8 xl:my-0 md:my-5 my-5 w-72 h-72 md:h-[36rem] md:w-[34rem] relative rounded-[64px] overflow-hidden;
+    }
+
+    .work-card-big {
+        @apply w-72 h-72 md:h-[36rem] md:w-[48rem] hidden xl:table-cell rounded-[64px] mx-8 relative overflow-hidden;
+    }
+
+    .work-mobile {
+        @apply md:table-cell xl:hidden overflow-hidden;
+    }
+
+    .work-name {
+        @apply flex justify-center px-4 py-1 md:px-11 md:py-8 text-xl md:text-5xl font-serif font-bold;
+    }
+
+    .work-description {
+        @apply flex justify-center font-serif text-sm md:text-xl;
+    }
+
+    .work-image {
+        @apply bottom-[-1rem] right-[-16rem] max-w-lg md:bottom-[-12rem] md:right-[-52rem] md:max-w-[80rem] absolute;
+    }
+
+    .work-image-big {
+        @apply right-[-37rem];
+    }
+
+    .work-image-mob {
+        @apply right-[1.5rem] bottom-[-15rem] max-w-sm md:bottom-[-15rem] md:right-[6.5rem] md:max-w-lg  max-h-[40rem] absolute;
+    }
+
+    .footer-list {
+        @apply p-4 px-8 text-lg
+    }
+
+    .footer-list > li {
+        @apply my-4
+    }
 }
