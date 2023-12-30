@@ -52,5 +52,7 @@ jobs:
         git config user.email "<>"
     - uses: actions/download-artifact@v4
     - run: mv build/** .
-    - run: git commit -m "Deployed by ${{ github.actor }} commit ${{ github.run_id }}"
+    - run: |
+       git add .
+       git commit -m "Deployed by ${{ github.actor }} commit ${{ github.ref_name }}"
     - run: git push origin main
