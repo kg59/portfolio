@@ -37,6 +37,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
+    needs: build
     environment: kg59.github.io        
     steps:
     - uses: actions/checkout@v4
