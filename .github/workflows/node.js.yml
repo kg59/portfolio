@@ -34,3 +34,14 @@ jobs:
        name: build
        path: |
         build
+
+  deploy:
+    runs-on: ubuntu-latest
+    environment: kg59.github.io        
+    steps:
+    - uses: actions/download-artifact@v4
+      with:
+        name: build
+        path: |
+         build
+            
