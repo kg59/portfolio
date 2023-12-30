@@ -51,7 +51,9 @@ jobs:
         git config user.name "GitHub Actions Bot"
         git config user.email "<>"
     - uses: actions/download-artifact@v4
-    - run: mv build/** .
+    - run: |
+       mv build/** .
+       touch .nojekyll
     - run: |
        git add .
        git commit -m "Deployed by ${{ github.actor }} commit ${{ github.ref_name }}"
