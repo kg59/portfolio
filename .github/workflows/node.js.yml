@@ -20,7 +20,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
@@ -28,8 +28,8 @@ jobs:
     - run: npm run build --if-present
     - run: npm run test --if-present
     - run: mkdir build
-    - run: mv .next out build
-    - uses: actions/upload-artifact@v3
+    - run: mv out/** build 
+    - uses: actions/upload-artifact@v4
       with:
        name: build
        path: |
@@ -41,5 +41,15 @@ jobs:
     needs: build
     environment: kg59.github.io        
     steps:
-    - uses: actions/download-artifact@v3
-    - run: ls -la
+    - uses: actions/download-artifact@v4
+    - uses: actions/checkout@v4
+      with:
+        repository: kg59.github.io
+        ref: 'main'
+        token:  ${{secrets.KG59}}
+    - name: setup git config
+      run: |
+        git config user.name "GitHub Actions Bot"
+        git config user.email "<>"
+    - run: git commit -m "Deployed by ${{ github.actor }} commit ${{ github.head_ref }}"
+    - run: git push origin main
