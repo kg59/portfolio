@@ -37,11 +37,9 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
+    if: success()
     needs: build
     environment: kg59.github.io        
     steps:
-    - uses: actions/checkout@v4
-    - uses: actions/download-artifact@v4
-      with:
-        name: build
+    - uses: actions/download-artifact@v3
     - run: ls -la
