@@ -52,6 +52,7 @@ jobs:
         git config user.email "<>"
     - uses: actions/download-artifact@v4
     - run: |
+       rm -rf ./_next
        mv -f build/** .
        touch .nojekyll
     - run: |
