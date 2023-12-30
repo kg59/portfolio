@@ -41,7 +41,6 @@ jobs:
     needs: build
     environment: kg59.github.io        
     steps:
-    - uses: actions/download-artifact@v4
     - uses: actions/checkout@v4
       with:
         repository: kg59/kg59.github.io
@@ -51,6 +50,7 @@ jobs:
       run: |
         git config user.name "GitHub Actions Bot"
         git config user.email "<>"
-        mv build/** .
+    - uses: actions/download-artifact@v4
+    - run: mv build/** .
     - run: git commit -m "Deployed by ${{ github.actor }} commit ${{ github.run_id }}"
     - run: git push origin main
