@@ -1,5 +1,10 @@
 import React from 'react'
 
+/**
+ * Component for displaying Hero
+ * 
+ * Todo: Add State for Hero name, Add Icons, Photo
+ */
 export default function Hero() {
   return (
     <div class="hero-box content">

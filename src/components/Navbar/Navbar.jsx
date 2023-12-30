@@ -1,5 +1,10 @@
 import React from 'react'
 
+/**
+ * Component for displaying Navbar
+ * 
+ * Todo: Add State for Navbar links, Navbar animation, make it sticky
+ */
 export default function Navbar() {
   return (
     <nav class="nav-box">
