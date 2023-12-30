@@ -44,7 +44,7 @@ jobs:
     - uses: actions/download-artifact@v4
     - uses: actions/checkout@v4
       with:
-        repository: kg59.github.io
+        repository: kg59/kg59.github.io
         ref: 'main'
         token:  ${{secrets.KG59}}
     - name: setup git config
