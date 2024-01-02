@@ -1,0 +1,18 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "./components/Navbar/Navbar.module.css";
+
+@import "tailwindcss/utilities";
+
+
+/*Default Styles*/
+
+body {
+    @apply bg-gray-200 text-gray-800 font-sans; 
+}
+
+header {
+    @apply pt-5 px-0;
+}
