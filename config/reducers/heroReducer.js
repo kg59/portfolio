@@ -5,19 +5,23 @@ const initialState = {
     about: {
         name: "Hi. I'm Karan.",
         jobs: [
-        "A Software Dev.",
-        "A Designer.",
-        "A Devops Enthusiast.", 
-        "A Researcher.",
-        "A Gamer.",
-        "A Creator.",
-        "A Writer.",
-        "A Philospher.",
-        "A Human."
+        {title:"Software Dev."},
+        {title:"Designer.", styles: {font: "'Satisfy', cursive"}},
+        {title:"DevOps Guy.", styles: {font: "'M PLUS Code Latin', monospace"}},
+        {title:"Researcher.",styles: {font: "'Times New Roman', Times, serif"}},
+        {title:"Gamer.",styles: {font: "'Press Start 2P'"}},
+        {title:"Creator.",styles: {font: "'Cherry Cream Soda'"}},
+        {title:"Writer.",styles: {font: "'Calibri', sans-serif;"}},
+        {title:"Philospher.",styles: {font: "'GFS Didot'"}},
+        {title:"Learner.",styles: {font: "'Open Sans'"}},
+        {title:"Human.",styles: {font: "Papyrus, fantasy"}}
     ],
         sub: "Using my varied skills, I'm dedicated to innovating and delivering premier solutions.",
     },
-    icon: faStar
+    icon: faStar,
+    defaultStyles: {
+        font: "ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'"
+    }
 }
 
 const getHero = createSlice({

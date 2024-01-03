@@ -1,11 +1,11 @@
 @layer components {
          /*Hero Styles*/    
         .hero-box {
-            @apply font-extrabold justify-evenly w-full flex;
+            @apply font-extrabold justify-between w-full flex;
         }
     
         .hero-star {
-            @apply hidden md:table-cell;
+            @apply hidden md:table-cell text-yellow-500;
         }
     
         .hero-star > span {

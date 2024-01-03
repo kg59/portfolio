@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useSelector } from 'react-redux'
 import { TypeAnimation } from 'react-type-animation';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -9,24 +10,39 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function Hero() {
   const hero = useSelector(state => state.hero)
+  const [fontStyle, setFontStyle] = useState(hero.defaultStyles.font);
 
   return (
     <div className="hero-box">
-      <FontAwesomeIcon icon={hero.icon} className="hero-star" />
+      <FontAwesomeIcon icon={hero.icon} className="hero-star" size="4x" />
       <div className="hero-name">
-        <span>{hero.about.name}</span><br />
-        {/**Type Animation */}
-        <TypeAnimation sequence={
+        <span>{hero.about.name}</span>
+        <br/>
+        A &nbsp;
+        <span style={{
+          fontFamily: fontStyle
+        }}>
+        <TypeAnimation 
+        preRenderFirstString={true}
+        sequence={
           hero.about.jobs.map((job, index) => {
-            return [job, 2000]
+            if (job.styles != undefined) {
+              return [ () => setFontStyle(job.styles.font), job.title, 2000, '']
+            } else {
+              return [() => setFontStyle(hero.defaultStyles.font), job.title, 2000, '']
+            }
           }).flat()
         }
-          wrapper="span" cursor={true} repeat={Infinity} />
+          wrapper="span" 
+          cursor={true} 
+          repeat={Infinity} 
+        />
+        </span>
         <div className="hero-sub">
           {hero.about.sub}
         </div>
       </div>
-      <FontAwesomeIcon icon={hero.icon} className="hero-star" />
+      <FontAwesomeIcon icon={hero.icon} className="hero-star" size="4x" />
     </div>
   )
 }
