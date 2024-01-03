@@ -45,6 +45,8 @@ jobs:
       run: |
         git config user.name "GitHub Actions Bot"
         git config user.email "<>"
+        rm -rf ./_next
+        rm -rf ./blog
     - uses: actions/download-artifact@v4
     - run: |
        mv -f out/** .
