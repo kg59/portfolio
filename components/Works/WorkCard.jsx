@@ -43,12 +43,18 @@ const setPreset = (imagepreset, imagemob) => {
     }
 }
 
-export default function WorkCard({cardbig,cardmobile,cardcolor,imagepreset,imagesrc, imagemob}) {
+/**
+ * 
+ * @param {name, description, cardbig cardmobile,cardcolor,imagepreset,imagesrc, imagemob}
+ * @returns 
+ */
+
+export default function WorkCard({name,description,cardbig,cardmobile,cardcolor,imagepreset,imagesrc, imagemob}) {
   const preset = setPreset(imagepreset,imagemob)
   return (
     <div className={setCardClass(cardbig,cardmobile)} style={{backgroundColor: cardcolor? cardcolor : "skyblue"}}>
-        <span className="work-name">Portfolio</span>
-        <span className="work-description">Just some stuff</span>
+        <span className="work-name">{name}</span>
+        <span className="work-description">{description}</span>
         <Image className={setImageClass(cardbig,imagemob)} src={setImage(imagesrc,imagemob)} 
         width={preset.modifiers.width} 
         height={preset.modifiers.height}/>

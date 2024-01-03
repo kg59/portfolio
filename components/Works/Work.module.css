@@ -36,6 +36,6 @@
     }
 
     .work-image-mob {
-        @apply right-[1.5rem] bottom-[-15rem] max-w-sm md:bottom-[-15rem] md:right-[6.5rem] md:max-w-lg  max-h-[40rem] absolute;
+        @apply right-[1.5rem] bottom-[-15rem] max-w-sm md:bottom-[-15rem] md:right-[4.5rem] md:max-w-lg  max-h-[40rem] absolute;
     }
 }
