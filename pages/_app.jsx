@@ -1,5 +1,5 @@
 // Css
-import '@/globals.css';
+import '@/styles/globals.css';
 
 //Store
 import { store } from '@/config/store'

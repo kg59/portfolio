@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { compareDesc, format, parseISO } from 'date-fns'
 import { allPosts } from '@/.contentlayer/generated'
-import Layout from '@/layouts/Default/Layout'
+import Layout from '@/layouts/Default/Default'
 
 
 function PostCard(post) {
@@ -24,7 +24,7 @@ export default function Blog() {
   const posts = allPosts.sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)))
 
   return (
-    <Layout main={
+    <Layout content={
     <div className="mx-auto max-w-xl py-8">
       <h1 className="mb-8 text-center text-2xl font-black">Next.js + Contentlayer Example</h1>
       {posts.map((post, idx) => (

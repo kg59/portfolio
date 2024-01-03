@@ -2,12 +2,15 @@
 
 @import "tailwindcss/components";
 
-@import "./components/Navbar/Navbar.module.css";
+@import "../components/Navbar/Navbar.module.css";
+@import "../components/Hero/Hero.module.css";
 
 @import "tailwindcss/utilities";
 
 
 /*Default Styles*/
+
+@import './defalut.css';
 
 body {
     @apply bg-gray-200 text-gray-800 font-sans; 

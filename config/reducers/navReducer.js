@@ -10,7 +10,7 @@ const initialState = {
         {name:"Blog", icon: faBlog, link: "/blog"},
         {name:"Contact", icon: faPhone, link: "/contact"}
     ],
-    selected: 0
+    selected: -1
 }
 
 const selectNav = createSlice({

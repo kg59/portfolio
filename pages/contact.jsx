@@ -1,9 +1,8 @@
-import React from 'react'
-import Layout from '@/layouts/Default/Layout'
+import Layout from '@/layouts/Default/Default'
 
 
 export default function contact() {
   return (
-    <Layout main={<div>contact</div>}/>
+    <Layout content={<div>contact</div>}/>
   )
 }

@@ -1,8 +1,7 @@
-import React from 'react'
-import Layout from '@/layouts/Default/Layout'
+import Layout from '@/layouts/Default/Default'
 
 export default function about() {
   return (
-    <Layout main={<div>about</div>}/>
+    <Layout content={<div>about</div>}/>
   )
 }
