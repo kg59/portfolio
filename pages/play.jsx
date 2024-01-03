@@ -1,8 +1,19 @@
+import Head from 'next/head'
 import Layout from '@/layouts/Default/Default'
 
 
 export default function play() {
   return (
-    <Layout content={<div>play</div>}/>
+    <>
+    <Head>
+    <title>Play</title>
+    </Head>
+    <Layout content={
+      <div>
+        play
+      </div>
+    }
+      />
+    </>
   )
 }

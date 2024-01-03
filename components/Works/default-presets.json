@@ -1,0 +1,16 @@
+{
+    "work": {
+      "modifiers": {
+        "format": "png",
+        "width": 2600,
+        "height": 1200
+        }
+    },
+    "workMob": {
+      "modifiers": {
+        "format": "png",
+        "width": 882,
+        "height": 1756
+        }
+    }
+}

@@ -1,21 +1,24 @@
+import { useSelector } from 'react-redux'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 /**
  * Component for hero
  * 
  */
 
 export default function Hero() {
+  const hero = useSelector(state => state.hero)
+
   return (
     <div className="hero-box">
-        <div className="hero-star">
-            <span></span>
-        </div>
+        <FontAwesomeIcon icon={hero.icon} className="hero-star"/>
         <div className="hero-name">
-             <span>K59.</span>
+             <span>{hero.about.name}</span>
             <div className="hero-sub">
+              {hero.about.sub}
             </div>
         </div>
-        <div className="hero-star">
-        </div>
+        <FontAwesomeIcon icon={hero.icon} className="hero-star"/>
     </div>
   )
 }

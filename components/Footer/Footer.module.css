@@ -1,0 +1,9 @@
+@layer components {
+    .footer-list {
+        @apply p-4 px-8 text-lg
+    }
+
+    .footer-list > li {
+        @apply my-4
+    }
+}
