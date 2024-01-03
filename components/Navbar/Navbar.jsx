@@ -35,7 +35,7 @@ export default function Navbar() {
                       <Link href={item.link} onClick={()=> dispatch(updateSelected(index))}>
                         <span className='nav-item'>
                           {item.name}
-                          <FontAwesomeIcon icon={item.icon} className="nav-icon"/>
+                          <i className="hidden md:table-cell"><FontAwesomeIcon icon={item.icon} className="nav-icon"/></i>
                         </span>
                       </Link>
                       </li>
@@ -46,7 +46,7 @@ export default function Navbar() {
                       <Link href={item.link} onClick={()=> dispatch(updateSelected(index))}>
                         <span className='nav-item-selected'>
                           {item.name}
-                          <FontAwesomeIcon icon={item.icon} className="nav-icon bg-green-400"/>
+                          <i className="hidden md:table-cell"><FontAwesomeIcon icon={item.icon} className="nav-icon bg-green-400"/></i>
                         </span>
                       </Link>
                       </li>
