@@ -4,10 +4,11 @@
 
 Next work:
 
-fix hero section
-impliment work part
-Add about page
-add contacts page
+fix hero section - done
+impliment work part - done
+Add about page - todo
+add contacts page - todo
+add auto dark mode - todo
 
 future ideas
 google ads

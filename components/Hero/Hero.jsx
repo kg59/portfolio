@@ -6,6 +6,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 /**
  * Component for hero
  * 
+ * Fetch details from heroReducer and use TypeAnimation
+ * 
  */
 
 export default function Hero() {
@@ -22,6 +24,7 @@ export default function Hero() {
         <span style={{
           fontFamily: fontStyle
         }}>
+        {/** Animation speed 2 sec docs - https://react-type-animation.netlify.app/examples */}
         <TypeAnimation 
         preRenderFirstString={true}
         sequence={
