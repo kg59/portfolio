@@ -1,8 +1,6 @@
+![Build](https://github.com/kg59/portfolio/actions/workflows/node.js.yml/badge.svg)
+
 ## TODO
-
-Bugs:
-Navbar always start at work / and does not changes if path changes: fix impliment navbar path select on site load
-
 
 Next work:
 
