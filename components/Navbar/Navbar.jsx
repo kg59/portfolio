@@ -22,7 +22,7 @@ export default function Navbar() {
     if (index != selected) {
       dispatch(updateSelected(index))
     }
-  }, [])
+  })
 
   return (
     <nav className="nav-box">

@@ -2,10 +2,10 @@ import { createSlice } from "@reduxjs/toolkit";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 const initialState = {
-    hero: {
-        name: "Karan Goel",
+    about: {
+        name: "KG59",
         jobs: ["Developer", "Gamer", "Researcher"],
-        sub: "Using my varied skills, I'm dedicated to innovating and delivering premier solutions",
+        sub: "Design a good sub",
     },
     icon: faStar
 }
