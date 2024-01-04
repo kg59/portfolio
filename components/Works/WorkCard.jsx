@@ -59,8 +59,8 @@ export default function WorkCard({ name, description, cardbig, cardmobile, cardc
     const preset = setPreset(imagepreset, imagemob)
     return (
         <div className={setCardClass(cardbig, cardmobile)} style={{ backgroundColor: cardcolor ? cardcolor : "skyblue" }}>
-            <span className="work-name">{name}</span>
-            <span className="work-description">{description}</span>
+            <h4 className="work-name">{name}</h4>
+            <p className="work-description">{description}</p>
             <Image className={setImageClass(cardbig, imagemob)} src={setImage(imagesrc, imagemob)}
                 width={preset.modifiers.width}
                 height={preset.modifiers.height}

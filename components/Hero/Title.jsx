@@ -20,10 +20,10 @@ export default function Title({ icon, name, sub }) {
         <div className="hero-box">
             {createIcons(icon)}
             <div className="hero-name">
-                <span>{name}</span>
-                <div className="hero-sub">
+                <h3>{name}</h3>
+                <p className="hero-sub">
                     {sub}
-                </div>
+                </p>
                 {createIcons(icon)}
             </div>
         </div>

@@ -9,29 +9,37 @@ import Title from '@/components/Hero/Title'
 
 export default function index() {
   return (
-  <>
-  <Head>
-    <title>Work</title>
-    <meta name="description" content="Works by Karan Goel."/>
-  </Head>
-
-  <Layout content={
     <>
-      <Hero/>
-      <WorkBox 
-      card1={<WorkCard name="Project1" description="Project1" cardbig={true}/>}
-      card3={<WorkCard name="Project2" cardcolor="pink" description="Project2" imagemob={true}/>} 
-      card2={<WorkCard name="Project1" description="Project1" cardmobile={true}/>}
-      />
-      <Title name="in Progress" sub="Work in various states of design and development, from side projects, to in-flight product design and development."/>
-      <WorkBox 
-      card4={<WorkCard name="Project4" description="Project4" cardbig={true}/>}
-      card2={<WorkCard name="Project3" cardcolor="pink" description="Project3" imagemob={true}/>} 
-      card3={<WorkCard name="Project4" description="Project4" cardmobile={true}/>}
+      <Head>
+        <title>Work</title>
+        <meta name="description" content="Works by Karan Goel" />
+      </Head>
+
+      <Layout content={
+        <>
+          <section>
+            <Hero />
+          </section>
+
+          <section>
+          <WorkBox
+            card1={<WorkCard name="Project1" description="Project1" cardbig={true} />}
+            card3={<WorkCard name="Project2" cardcolor="pink" description="Project2" imagemob={true} />}
+            card2={<WorkCard name="Project1" description="Project1" cardmobile={true} />}
+          />
+          </section>
+
+          <section>
+          <Title name="in Progress" sub="Work in various states of design and development, from side projects, to in-flight product design and development." />
+          <WorkBox
+            card4={<WorkCard name="Project4" description="Project4" cardbig={true} />}
+            card2={<WorkCard name="Project3" cardcolor="pink" description="Project3" imagemob={true} />}
+            card3={<WorkCard name="Project4" description="Project4" cardmobile={true} />}
+          />
+          </section>
+        </>
+      }
       />
     </>
-  }
-    />
-  </>
   )
 }

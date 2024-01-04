@@ -39,7 +39,7 @@ export default function Navbar() {
               if (index !== selected) {
                 return (
                   <li key={index}>
-                    <Link href={item.link} onClick={() => dispatch(updateSelected(index))}>
+                    <Link title={item.name} href={item.link} onClick={() => dispatch(updateSelected(index))}>
                       <span className='nav-item'>
                         {item.name}
                         <i className="hidden md:table-cell"><FontAwesomeIcon icon={item.icon} className="nav-icon" /></i>
@@ -50,7 +50,7 @@ export default function Navbar() {
               } else {
                 return (
                   <li key={index}>
-                    <Link href={item.link} onClick={() => dispatch(updateSelected(index))}>
+                    <Link title={item.name} href={item.link} onClick={() => dispatch(updateSelected(index))}>
                       <span className='nav-item-selected'>
                         {item.name}
                         <i className="hidden md:table-cell"><FontAwesomeIcon icon={item.icon} className="nav-icon bg-green-500" /></i>

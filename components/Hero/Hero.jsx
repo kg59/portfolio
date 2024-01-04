@@ -29,8 +29,7 @@ export default function Hero() {
       {createIcons(hero.icon)}
       <div className="hero-name">
         <div className="hero-title">
-          <span>{hero.about.name}</span>
-          <br />
+          <h1>{hero.about.name}</h1>
           A &nbsp;
           <span style={{
             fontFamily: fontStyle
@@ -47,15 +46,16 @@ export default function Hero() {
                   }
                 }).flat()
               }
-              wrapper="span"
+              className="hero-job"
+              wrapper="h2"
               cursor={true}
               repeat={Infinity}
             />
           </span>
         </div>
-        <div className="hero-sub">
+        <p className="hero-sub">
           {hero.about.sub}
-        </div>
+        </p>
       </div>
       {createIcons(hero.icon)}
     </div>
