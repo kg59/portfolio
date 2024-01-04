@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { faSun, faMoon } from "@fortawesome/free-regular-svg-icons";
 
 const initialState = {
     about: {
@@ -17,7 +17,7 @@ const initialState = {
     ],
         sub: "Using my varied skills, I'm dedicated to innovating and delivering premier solutions.",
     },
-    icon: faStar,
+    icon: faSun,
     defaultStyles: {
         font: "ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'"
     }
