@@ -12,7 +12,7 @@ export default function index() {
     <>
       <Head>
         <title>Work</title>
-        <meta name="description" content="Works by Karan Goel" />
+        <meta name="description" content="List of works and projects done by Karan Goel, Completed, In Progress and In Use" />
       </Head>
 
       <Layout content={
@@ -22,6 +22,7 @@ export default function index() {
           </section>
 
           <section>
+          <Title name="Projects" sub="Works completed." />
           <WorkBox
             card1={<WorkCard name="Project1" description="Project1" cardbig={true} />}
             card3={<WorkCard name="Project2" cardcolor="pink" description="Project2" imagemob={true} />}
