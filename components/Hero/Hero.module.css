@@ -1,7 +1,11 @@
 @layer components {
          /*Hero Styles*/    
         .hero-box {
-            @apply font-extrabold justify-evenly w-full flex pt-24 md:pt-36 lg:pt-40;;
+            @apply font-extrabold justify-evenly w-full flex pt-24 md:pt-36 lg:pt-40;
+        }
+
+        .hero-title-box {
+            @apply font-extrabold justify-evenly w-full flex pt-20 md:pt-32 lg:pt-36;
         }
     
         .hero-star {

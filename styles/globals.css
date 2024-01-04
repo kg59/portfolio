@@ -8,6 +8,7 @@
 @import "../components/Works/Work.module.css";
 @import "../components/Footer/Footer.module.css";
 @import "../components/Waves/Waves.module.css";
+@import "../components/DownArrow/DownArrow.module.css";
 
 @import "tailwindcss/utilities";
 
@@ -15,6 +16,10 @@
 /*Default Styles*/
 
 @import './defalut.css';
+
+html{
+    scroll-behavior:smooth;
+}
 
 body {
     @apply bg-gray-200 text-gray-800 font-sans; 

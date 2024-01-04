@@ -1,0 +1,9 @@
+@layer components {
+    .downa-container {
+        @apply hidden md:flex justify-center mt-28;
+    }
+
+    .downa-arrow {
+        @apply animate-bounce text-7xl rounded-full ring-gray-800 ring-2 bg-white text-green-500 drop-shadow-xl;
+    }
+}

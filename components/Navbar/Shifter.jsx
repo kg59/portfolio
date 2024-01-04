@@ -23,7 +23,7 @@ export default function Shifter() {
 
   return (
     <button
-      className="w-20 h-10 rounded-full bg-white flex items-center transition duration-300 focus:outline-none shadow"
+      className="nav-dn-shifter"
       onClick={toggleTheme()}>
       <div
         className={clsx("w-12 h-12 relative rounded-full transition duration-500 transform p-1 text-white", {

@@ -31,7 +31,7 @@
     /*Clock*/
 
     .nav-clock {
-        @apply relative bg-white flex items-center justify-end w-20 h-20 overflow-hidden rounded-full ring-gray-800 ring-1;
+        @apply relative bg-white hidden md:flex items-center justify-end w-20 h-20 overflow-hidden rounded-full ring-gray-800 ring-1;
     }
 
     .nav-clock-items {
@@ -44,5 +44,11 @@
 
     .nav-clock-minute-hand {
         @apply w-1/2 h-1 bg-blue-500  origin-left rotate-[340deg] group-hover:rotate-[340deg] duration-1000 ease-in-out;
+    }
+
+    /*Shifter*/
+
+    .nav-dn-shifter {
+        @apply hidden w-20 h-10 rounded-full bg-white md:flex items-center transition duration-300 focus:outline-none shadow
     }
 }

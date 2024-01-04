@@ -17,7 +17,7 @@ function createIcons(icon) {
 
 export default function Title({ icon, name, sub }) {
     return (
-        <div className="hero-box">
+        <div className="hero-title-box" id={name}>
             {createIcons(icon)}
             <div className="hero-name">
                 <h3>{name}</h3>
