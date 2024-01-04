@@ -23,10 +23,10 @@ const initialState = {
     }
 }
 
-const getHero = createSlice({
+const hero = createSlice({
     name: "hero",
     initialState,
     reducers: {}
 })
 
-export default getHero.reducer
+export default hero.reducer

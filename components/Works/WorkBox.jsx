@@ -1,3 +1,5 @@
+"use client";
+
 /**
  * It contains four card slots
  * card1 -> flex

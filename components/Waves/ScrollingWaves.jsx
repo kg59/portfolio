@@ -1,3 +1,5 @@
+"use client";
+
 import { useScroll, animated } from '@react-spring/web'
 
 export default function ScrollingWaves({content}) {

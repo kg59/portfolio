@@ -1,3 +1,6 @@
+"use client";
+
+
 import Image from 'next/image'
 import presets from './default-presets.json'
 
