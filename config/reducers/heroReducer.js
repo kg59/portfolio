@@ -9,9 +9,8 @@ const initialState = {
         {title:"Designer.", styles: {font: "'Satisfy', cursive"}},
         {title:"DevOps Guy.", styles: {font: "'M PLUS Code Latin', monospace"}},
         {title:"Researcher.",styles: {font: "'Times New Roman', Times, serif"}},
-        {title:"Gamer.",styles: {font: "'Press Start 2P'"}},
-        {title:"Creator.",styles: {font: "'Cherry Cream Soda'"}},
-        {title:"Writer.",styles: {font: "'Calibri', sans-serif;"}},
+        {title:"Gamer.",styles: {font: "'Cherry Cream Soda'"}},
+        {title:"Writer.",styles: {font: "'Calibri', sans-serif"}},
         {title:"Philospher.",styles: {font: "'GFS Didot'"}},
         {title:"Learner.",styles: {font: "'Open Sans'"}},
         {title:"Human.",styles: {font: "Papyrus, fantasy"}}

@@ -1,0 +1,21 @@
+@layer components {
+  .waves-container {
+    @apply h-full w-full overflow-y-scroll;
+  }
+
+  .waves-box {
+    @apply h-full w-full;
+  }
+
+  .waves-end {
+    @apply flex flex-col justify-between h-full w-full fixed  items-end;
+  }
+
+  .waves-start {
+    @apply flex flex-col justify-between h-full w-full fixed;
+  }
+
+  .waves-bar {
+    @apply bg-green-500 h-[1vh];
+  }
+}

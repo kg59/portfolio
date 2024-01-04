@@ -7,8 +7,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
  * Component for hero
  * 
  * Fetch details from heroReducer and use TypeAnimation
- * 
+ * Todo: improve create icons
  */
+
+function createIcons(icon) {
+  return (
+    <div className="hidden md:table-cell flex-row">
+      <div><FontAwesomeIcon icon={icon} className="hero-star" size="4x" /></div>
+    </div>
+  )
+}
 
 export default function Hero() {
   const hero = useSelector(state => state.hero)
@@ -16,7 +24,7 @@ export default function Hero() {
 
   return (
     <div className="hero-box">
-      <span className="hidden md:table-cell"><FontAwesomeIcon icon={hero.icon} className="hero-star" size="4x" /></span>
+      {createIcons(hero.icon)}
       <div className="hero-name">
         <div className="hero-title">
           <span>{hero.about.name}</span>
@@ -47,7 +55,7 @@ export default function Hero() {
           {hero.about.sub}
         </div>
       </div>
-      <span className="hidden md:table-cell"><FontAwesomeIcon icon={hero.icon} className="hero-star" size="4x" /></span>
+      {createIcons(hero.icon)}
     </div>
   )
 }
