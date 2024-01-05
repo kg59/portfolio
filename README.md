@@ -1,14 +1,16 @@
 ![Build](https://github.com/kg59/portfolio/actions/workflows/node.js.yml/badge.svg)
 
-## TODO
+# Portfolio Website build using NextJs
 
-Next work:
+### Work in Progress
 
-fix hero section - done
-impliment work part - done
-Add about page - todo
-add contacts page - todo
-add auto dark mode - todo
+- [x] Initial Setups - Layout, Index and Blog
+- [] Refiinig Components
+- [] Streamlining Blog
+- [] Adding Dark mode 
 
-future ideas
-google ads
+### Todo
+
+- Add data to About Page
+- Add Experience Component
+- Add Footer
