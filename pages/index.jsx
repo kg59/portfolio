@@ -13,32 +13,44 @@ export default function index() {
     <>
       <Head>
         <title>Work</title>
-        <meta name="description" content="List of works and projects done by Karan Goel, Completed, In Progress and In Use" />
+        <meta name="description" content="Portfolio of Karan Goel" />
       </Head>
 
       <Layout content={
         <>
           <section>
             <Hero />
-            <DownArrow/>
+            <DownArrow />
           </section>
 
           <section>
-          <Title name="Projects" sub="Works completed." />
-          <WorkBox
-            card1={<WorkCard name="Project1" description="Project1" cardbig={true} />}
-            card3={<WorkCard name="Project2" cardcolor="pink" description="Project2" imagemob={true} />}
-            card2={<WorkCard name="Project1" description="Project1" cardmobile={true} />}
-          />
+            <Title name="About me" id="About"/>
           </section>
 
           <section>
-          <Title name="in Progress" sub="Work in various states of design and development, from side projects, to in-flight product design and development." />
-          <WorkBox
-            card4={<WorkCard name="Project4" description="Project4" cardbig={true} />}
-            card2={<WorkCard name="Project3" cardcolor="pink" description="Project3" imagemob={true} />}
-            card3={<WorkCard name="Project4" description="Project4" cardmobile={true} />}
-          />
+            <Title name="Projects" sub="Works completed." />
+            <WorkBox
+              card1={<WorkCard name="Project1" description="Project1" cardbig={true} />}
+              card3={<WorkCard name="Project2" cardcolor="pink" description="Project2" imagemob={true} />}
+              card2={<WorkCard name="Project1" description="Project1" cardmobile={true} />}
+            />
+          </section>
+
+          <section>
+            <Title name="in Progress" sub="Work in various states of design and development, from side projects, to in-flight product design and development." />
+            <WorkBox
+              card4={<WorkCard name="Project4" description="Project4" cardbig={true} />}
+              card2={<WorkCard name="Project3" cardcolor="pink" description="Project3" imagemob={true} />}
+              card3={<WorkCard name="Project4" description="Project4" cardmobile={true} />}
+            />
+          </section>
+
+          <section>
+            <Title name="Play"/>
+          </section>
+
+          <section>
+            <Title name="Contact"/>
           </section>
         </>
       }

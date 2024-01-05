@@ -15,9 +15,9 @@ function createIcons(icon) {
     }
 }
 
-export default function Title({ icon, name, sub }) {
+export default function Title({ icon, name, sub, id }) {
     return (
-        <div className="hero-title-box" id={name}>
+        <div className="hero-title-box" id={id ? id : name}>
             {createIcons(icon)}
             <div className="hero-name">
                 <h3>{name}</h3>

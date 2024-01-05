@@ -4,11 +4,11 @@ import { faCode, faUser, faGamepad, faBlog, faPhone } from "@fortawesome/free-so
 
 const initialState = { 
     navItems: [
-        {name:"Work", icon: faCode, link: "/"},
-        {name:"About", icon: faUser, link: "/about"},
-        {name:"Play", icon: faGamepad, link: "/play"},
-        {name:"Blog", icon: faBlog, link: "/blog"},
-        {name:"Contact", icon: faPhone, link: "/contact"}
+        {name:"About", icon: faUser, link: "/#About"},
+        {name:"Work", icon: faCode, link: "/#Projects"},
+        {name:"Play", icon: faGamepad, link: "/#Play"},
+        {name:"Contact", icon: faPhone, link: "/#Contact"},
+        {name:"Blog", icon: faBlog, link: "/blog"}
     ],
     selected: -1
 }
