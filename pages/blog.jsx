@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { compareDesc, format, parseISO } from 'date-fns'
 import { allPosts } from '@/.contentlayer/generated'
 import Layout from '@/layouts/Default/Default'
+import Title from '@/components/Hero/Title'
 
 
 function PostCard(post) {
@@ -26,7 +27,7 @@ export default function Blog() {
   return (
     <Layout content={
     <div className="mx-auto max-w-xl py-8">
-      <h1 className="mb-8 text-center text-2xl font-black">Next.js + Contentlayer Example</h1>
+      <Title name="Blog"/>
       {posts.map((post, idx) => (
         <PostCard key={idx} {...post} />
       ))}
