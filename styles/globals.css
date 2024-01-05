@@ -32,5 +32,5 @@ header {
 
 @font-face {
     font-family: "Acorn-Regular";
-    src: url('./Acorn-Regular.otf');
+    src: url('/Acorn-Regular.otf');
   }
