@@ -6,7 +6,7 @@ import React from 'react'
 export default function DownArrow() {
   return (
     <div className="downa-container">
-       <Link href="#About" title="to Projects"><div className="downa-arrow">&#8595;</div></Link> 
+       <Link href="#About" title="continue"><div className="downa-arrow">&#8595;</div></Link> 
     </div>
   )
 }

@@ -16,6 +16,6 @@
   }
 
   .waves-bar {
-    @apply bg-green-500 h-[1vh];
+    @apply bg-green-400 h-[1vh] rounded-full ring-gray-800 ring-1;
   }
 }

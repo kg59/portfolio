@@ -6,7 +6,8 @@ import Hero from '@/components/Hero/Hero'
 import WorkCard from '@/components/Works/WorkCard'
 import WorkBox from '@/components/Works/WorkBox'
 import Title from '@/components/Hero/Title'
-import DownArrow from '../components/DownArrow/DownArrow'
+import DownArrow from '@/components/DownArrow/DownArrow'
+import About from '@/components/Aboutme/About'
 
 export default function index() {
   return (
@@ -25,6 +26,11 @@ export default function index() {
 
           <section>
             <Title name="About me" id="About"/>
+            <About/>
+          </section>
+
+          <section>
+            <Title name="Experience" id="Exp"/>
           </section>
 
           <section>
@@ -46,11 +52,7 @@ export default function index() {
           </section>
 
           <section>
-            <Title name="Play"/>
-          </section>
-
-          <section>
-            <Title name="Contact"/>
+            <Title name="Contact me" id="Contact"/>
           </section>
         </>
       }

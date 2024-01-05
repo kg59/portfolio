@@ -4,7 +4,7 @@ import { useScroll, animated } from '@react-spring/web'
 
 export default function ScrollingWaves({content}) {
 
-  const X_LINES = 40
+  const X_LINES = 50
   const INITIAL_WIDTH = 20
 
   const { scrollYProgress } = useScroll()

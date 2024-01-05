@@ -21,7 +21,12 @@
         }
 
         .hero-title {
-            @apply h-20 md:h-72; 
+            @apply h-20 md:h-72 md:mt-12;
+            font-family: "Acorn-Regular";
+        }
+
+        .hero-title-text {
+            font-family: "Acorn-Regular";
         }
 
         .hero-job {

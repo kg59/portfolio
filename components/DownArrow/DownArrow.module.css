@@ -4,6 +4,6 @@
     }
 
     .downa-arrow {
-        @apply animate-bounce text-7xl rounded-full ring-gray-800 ring-2 bg-white text-green-500 drop-shadow-xl;
+        @apply animate-bounce-slow text-7xl rounded-full ring-gray-800 ring-2 bg-white text-green-500 drop-shadow-xl;
     }
 }

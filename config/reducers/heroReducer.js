@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { faSun, faMoon } from "@fortawesome/free-regular-svg-icons";
+import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
 
 const initialState = {
     about: {

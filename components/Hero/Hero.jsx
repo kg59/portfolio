@@ -15,7 +15,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 function createIcons(icon) {
   return (
     <div className="hidden md:table-cell flex-row">
-      <div><FontAwesomeIcon icon={icon} className="hero-star" size="6x" /></div>
+      <div><FontAwesomeIcon icon={icon} className="hero-star animate-spin-slow" size="8x" /></div>
     </div>
   )
 }

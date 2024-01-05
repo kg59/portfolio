@@ -9,6 +9,7 @@
 @import "../components/Footer/Footer.module.css";
 @import "../components/Waves/Waves.module.css";
 @import "../components/DownArrow/DownArrow.module.css";
+@import "../components/Aboutme/About.module.css";
 
 @import "tailwindcss/utilities";
 
@@ -28,3 +29,8 @@ body {
 header {
     @apply pt-5 px-0;
 }
+
+@font-face {
+    font-family: "Acorn-Regular";
+    src: url('./Acorn-Regular.otf');
+  }

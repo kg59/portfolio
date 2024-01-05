@@ -20,7 +20,7 @@ export default function Title({ icon, name, sub, id }) {
         <div className="hero-title-box" id={id ? id : name}>
             {createIcons(icon)}
             <div className="hero-name">
-                <h3>{name}</h3>
+                <h3 className="hero-title-text">{name}</h3>
                 <p className="hero-sub">
                     {sub}
                 </p>
